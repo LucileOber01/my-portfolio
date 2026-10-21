@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  --color-cream: #F5F5EF;
+  --color-peach: #F7E5D6;
+  --color-sage: #E1EADA;
+  --color-ink: #303F3C;
+  --color-muted: #8E9795;
+  --color-success: #4E7A5A;
+  --color-progress: #C98A4B;
+  --color-error: #A3402E;
+
+  --font-display: "League Gothic", sans-serif;
+  --font-body: "Questrial", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius-card: 24px;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
