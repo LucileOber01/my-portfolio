@@ -29,10 +29,39 @@ function Accueil() {
         </div>
       </div>
     </section>
-     <section aria-labelledby="apropos-titre" className="border-t border-ink">
+          <section aria-labelledby="apropos-titre" className="border-t border-ink">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
           <EnTeteSection code="US-01" nom="À propos" info="Statut : validée" />
           <h2 id="apropos-titre" className="font-display text-5xl md:text-7xl">À propos</h2>
+
+          <div className="grid gap-6 md:grid-cols-12">
+            <blockquote className="rounded-card bg-sage p-6 text-xl leading-snug md:col-span-7 md:p-10 md:text-[28px]">
+              <p className="mb-4 font-mono text-xs uppercase tracking-widest">User story</p>
+              <p>
+                En tant que <strong>recruteur</strong>, je cherche une Product Owner{' '}
+                <strong>curieuse et adaptable</strong>, afin de faire avancer mes projets de{' '}
+                <strong>transformation digitale</strong>.
+              </p>
+            </blockquote>
+
+            <div className="flex flex-col gap-5 md:col-span-5">
+              <p className="text-lg leading-relaxed">
+                Après plus de trois ans en gestion de produit au sein d'une startup, je fais évoluer
+                mon parcours vers la transformation digitale et l'innovation technologique. Année de
+                mise à niveau à Epitech Lyon en 2026, puis MBA Strategic Project Management en 2027.
+              </p>
+
+              <h3 className="border-t border-ink/35 pt-3 font-mono text-xs uppercase tracking-widest">
+                Critères d'acceptation
+              </h3>
+              <ul className="flex flex-col gap-2.5 text-lg">
+                <li><span aria-hidden="true" className="mr-3 font-mono">[x]</span>3 ans en gestion de produit, jusqu'à Lead Product Manager</li>
+                <li><span aria-hidden="true" className="mr-3 font-mono">[x]</span>Coordination Conception, Développement et Produit</li>
+                <li><span aria-hidden="true" className="mr-3 font-mono">[x]</span>Anglais B2 (TOEIC)</li>
+                <li><span aria-hidden="true" className="mr-3 font-mono">[ ]</span>Alternance de 2 ans dès janvier 2027</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>
