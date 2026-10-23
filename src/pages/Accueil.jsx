@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
+import EnTeteSection from '../components/EnTeteSection'
 function Accueil() {
   return (
+    <>
     <section aria-labelledby="hero-titre" className="mx-auto max-w-7xl px-6 pt-12 pb-16">
       <h1 id="hero-titre" className="sr-only">Lucile Ober, Product Owner / AMOA</h1>
 
@@ -27,6 +29,14 @@ function Accueil() {
         </div>
       </div>
     </section>
+     <section aria-labelledby="apropos-titre" className="border-t border-ink">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
+          <EnTeteSection code="US-01" nom="À propos" info="Statut : validée" />
+          <h2 id="apropos-titre" className="font-display text-5xl md:text-7xl">À propos</h2>
+        </div>
+      </section>
+    </>
+    
   )
 }
 
