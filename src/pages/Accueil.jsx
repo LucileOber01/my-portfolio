@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 function Accueil() {
   return (
     <section aria-labelledby="hero-titre" className="mx-auto max-w-7xl px-6 pt-12 pb-16">
@@ -14,9 +15,15 @@ function Accueil() {
         <span aria-hidden="true" className="font-display text-[128px] leading-[0.82] text-transparent [-webkit-text-stroke:2px_var(--color-ink)] md:text-[260px]">
           Ober
         </span>
-        <div className="flex flex-col gap-3 pb-4">
+               <div className="flex flex-col gap-3 pb-4">
           <p className="font-mono text-xs uppercase tracking-widest">Product Owner / AMOA</p>
           <p className="font-display text-4xl md:text-5xl">Designer. Coder. Piloter.</p>
+          <Link
+            to="/projets"
+            className="mt-2 inline-flex min-h-12 items-center gap-2 self-start rounded-full bg-ink px-6 text-cream hover:bg-ink/85"
+          >
+            Voir les releases <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>
