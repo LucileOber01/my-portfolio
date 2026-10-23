@@ -1,6 +1,15 @@
+import { HashRouter, Routes, Route } from 'react-router'
+import Accueil from './pages/Accueil'
+import Projets from './pages/Projets'
+
 function App() {
   return (
-      <h1 className="font-display text-8xl">Lucile Ober</h1>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/projets" element={<Projets />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
