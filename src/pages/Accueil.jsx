@@ -1,8 +1,7 @@
 import { Link } from 'react-router'
 import EnTeteSection from '../components/EnTeteSection'
 import ColonneBacklog from '../components/ColonneBacklog'
-import { savoirFaire, savoirs } from '../data/competences'
-
+import { savoirFaire, savoirs, enCours } from '../data/competences'
 function Accueil() {
   return (
     <>
@@ -71,11 +70,7 @@ function Accueil() {
 
       <section aria-labelledby="competences-titre" className="border-t border-ink">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
-          <EnTeteSection
-            code="US-02"
-            nom="Compétences"
-            info={`${savoirFaire.length + savoirs.length} items · source affichée`}
-          />
+         <EnTeteSection code="US-02" nom="Compétences" info={`${savoirFaire.length + savoirs.length + enCours.length} items · source affichée`} />
           <h2 id="competences-titre" className="font-display text-5xl md:text-7xl">
             Backlog de compétences
           </h2>
@@ -84,6 +79,22 @@ function Accueil() {
             <ColonneBacklog titre="Savoir-faire" items={savoirFaire} fond="bg-peach" />
             <ColonneBacklog titre="Savoirs" items={savoirs} fond="bg-sage" />
           </div>
+          <div className="flex flex-col gap-4 rounded-card border border-dashed border-ink p-4 md:p-6">
+  <div className="flex flex-wrap items-center justify-between gap-3">
+    <h3 className="font-mono text-xs uppercase tracking-widest">En cours d'acquisition · Epitech 2026</h3>
+    <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 font-mono text-xs uppercase tracking-wider">
+      <span aria-hidden="true" className="size-2 rounded-full bg-progress"></span>
+      En cours
+    </span>
+  </div>
+  <ul className="flex flex-wrap gap-2.5">
+    {enCours.map((item) => (
+      <li key={item.code} className="rounded-full bg-white px-4 py-2.5">
+        <span className="font-mono text-xs tracking-wider">{item.code}</span> · {item.label}
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
       </section>
     </>

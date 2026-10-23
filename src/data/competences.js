@@ -20,3 +20,13 @@ export const savoirs = [
   { code: 'SA-07', label: 'Anglais B2 (TOEIC)' },
   { code: 'SA-08', label: 'Veille technologique', source: 'Initiative' },
 ]
+
+export const enCours = [
+  { code: 'SA-09', label: 'HTML / CSS' },
+  { code: 'SA-10', label: 'JavaScript' },
+  { code: 'SA-11', label: 'Python' },
+  { code: 'SA-12', label: 'Java' },
+  { code: 'SA-13', label: 'MySQL' },
+  { code: 'SA-14', label: 'React' },
+  { code: 'SA-15', label: 'Tailwind CSS' },
+]
