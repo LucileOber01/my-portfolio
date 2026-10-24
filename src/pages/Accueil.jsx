@@ -2,30 +2,23 @@ import { Link } from 'react-router'
 import EnTeteSection from '../components/EnTeteSection'
 import ColonneBacklog from '../components/ColonneBacklog'
 import { savoirFaire, savoirs, enCours } from '../data/competences'
+import { roadmap } from '../data/roadmap'
+
 function Accueil() {
   return (
     <>
       <section aria-labelledby="hero-titre" className="mx-auto max-w-7xl px-6 pt-12 pb-16">
         <h1 id="hero-titre" className="sr-only">Lucile Ober, Product Owner / AMOA</h1>
-
         <div className="flex flex-wrap items-center gap-6 md:gap-10">
-          <span aria-hidden="true" className="font-display text-[128px] leading-[0.82] md:text-[260px]">
-            Lucile
-          </span>
+          <span aria-hidden="true" className="font-display text-[128px] leading-[0.82] md:text-[260px]">Lucile</span>
           <div className="size-20 rounded-full border-4 border-white bg-sage md:size-50"></div>
         </div>
-
         <div className="flex flex-wrap items-end gap-6 md:gap-10">
-          <span aria-hidden="true" className="font-display text-[128px] leading-[0.82] text-transparent [-webkit-text-stroke:2px_var(--color-ink)] md:text-[260px]">
-            Ober
-          </span>
+          <span aria-hidden="true" className="font-display text-[128px] leading-[0.82] text-transparent [-webkit-text-stroke:2px_var(--color-ink)] md:text-[260px]">Ober</span>
           <div className="flex flex-col gap-3 pb-4">
             <p className="font-mono text-xs uppercase tracking-widest">Product Owner / AMOA</p>
             <p className="font-display text-4xl md:text-5xl">Designer. Coder. Piloter.</p>
-            <Link
-              to="/projets"
-              className="mt-2 inline-flex min-h-12 items-center gap-2 self-start rounded-full bg-ink px-6 text-cream hover:bg-ink/85"
-            >
+            <Link to="/projets" className="mt-2 inline-flex min-h-12 items-center gap-2 self-start rounded-full bg-ink px-6 text-cream hover:bg-ink/85">
               Voir les releases <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -36,27 +29,14 @@ function Accueil() {
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
           <EnTeteSection code="US-01" nom="À propos" info="Statut : validée" />
           <h2 id="apropos-titre" className="font-display text-5xl md:text-7xl">À propos</h2>
-
           <div className="grid gap-6 md:grid-cols-12">
             <blockquote className="rounded-card bg-sage p-6 text-xl leading-snug md:col-span-7 md:p-10 md:text-[28px]">
               <p className="mb-4 font-mono text-xs uppercase tracking-widest">User story</p>
-              <p>
-                En tant que <strong>recruteur</strong>, je cherche une Product Owner{' '}
-                <strong>curieuse et adaptable</strong>, afin de faire avancer mes projets de{' '}
-                <strong>transformation digitale</strong>.
-              </p>
+              <p>En tant que <strong>recruteur</strong>, je cherche une Product Owner{' '}<strong>curieuse et adaptable</strong>, afin de faire avancer mes projets de{' '}<strong>transformation digitale</strong>.</p>
             </blockquote>
-
             <div className="flex flex-col gap-5 md:col-span-5">
-              <p className="text-lg leading-relaxed">
-                Après plus de trois ans en gestion de produit au sein d'une startup, je fais évoluer
-                mon parcours vers la transformation digitale et l'innovation technologique. Année de
-                mise à niveau à Epitech Lyon en 2026, puis MBA Strategic Project Management en 2027.
-              </p>
-
-              <h3 className="border-t border-ink/35 pt-3 font-mono text-xs uppercase tracking-widest">
-                Critères d'acceptation
-              </h3>
+              <p className="text-lg leading-relaxed">Après plus de trois ans en gestion de produit au sein d'une startup, je fais évoluer mon parcours vers la transformation digitale et l'innovation technologique. Année de mise à niveau à Epitech Lyon en 2026, puis MBA Strategic Project Management en 2027.</p>
+              <h3 className="border-t border-ink/35 pt-3 font-mono text-xs uppercase tracking-widest">Critères d'acceptation</h3>
               <ul className="flex flex-col gap-2.5 text-lg">
                 <li><span aria-hidden="true" className="mr-3 font-mono">[x]</span>3 ans en gestion de produit, jusqu'à Lead Product Manager</li>
                 <li><span aria-hidden="true" className="mr-3 font-mono">[x]</span>Coordination Conception, Développement et Produit</li>
@@ -70,31 +50,48 @@ function Accueil() {
 
       <section aria-labelledby="competences-titre" className="border-t border-ink">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
-         <EnTeteSection code="US-02" nom="Compétences" info={`${savoirFaire.length + savoirs.length + enCours.length} items · source affichée`} />
-          <h2 id="competences-titre" className="font-display text-5xl md:text-7xl">
-            Backlog de compétences
-          </h2>
-
+          <EnTeteSection code="US-02" nom="Compétences" info={`${savoirFaire.length + savoirs.length + enCours.length} items · source affichée`} />
+          <h2 id="competences-titre" className="font-display text-5xl md:text-7xl">Backlog de compétences</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <ColonneBacklog titre="Savoir-faire" items={savoirFaire} fond="bg-peach" />
             <ColonneBacklog titre="Savoirs" items={savoirs} fond="bg-sage" />
           </div>
           <div className="flex flex-col gap-4 rounded-card border border-dashed border-ink p-4 md:p-6">
-  <div className="flex flex-wrap items-center justify-between gap-3">
-    <h3 className="font-mono text-xs uppercase tracking-widest">En cours d'acquisition · Epitech 2026</h3>
-    <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 font-mono text-xs uppercase tracking-wider">
-      <span aria-hidden="true" className="size-2 rounded-full bg-progress"></span>
-      En cours
-    </span>
-  </div>
-  <ul className="flex flex-wrap gap-2.5">
-    {enCours.map((item) => (
-      <li key={item.code} className="rounded-full bg-white px-4 py-2.5">
-        <span className="font-mono text-xs tracking-wider">{item.code}</span> · {item.label}
-      </li>
-    ))}
-  </ul>
-</div>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h3 className="font-mono text-xs uppercase tracking-widest">En cours d'acquisition · Epitech 2026</h3>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 font-mono text-xs uppercase tracking-wider">
+                <span aria-hidden="true" className="size-2 rounded-full bg-progress"></span>
+                En cours
+              </span>
+            </div>
+            <ul className="flex flex-wrap gap-2.5">
+              {enCours.map((item) => (
+                <li key={item.code} className="rounded-full bg-white px-4 py-2.5">
+                  <span className="font-mono text-xs tracking-wider">{item.code}</span> · {item.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="roadmap-titre" className="border-t border-ink">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
+          <EnTeteSection code="US-03" nom="Parcours" info="Now · Next · Later" />
+          <h2 id="roadmap-titre" className="font-display text-5xl md:text-7xl">Roadmap</h2>
+          <ol className="grid gap-6 md:grid-cols-3">
+            {roadmap.map((etape) => (
+              <li key={etape.phase} className={`flex flex-col gap-4 rounded-card p-7 ${etape.fond}`}>
+                <div className="flex items-center justify-between font-mono text-xs uppercase tracking-widest">
+                  <span>{etape.phase}</span>
+                  <span className="rounded-full border border-ink px-3 py-1.5">{etape.date}</span>
+                </div>
+                <h3 className="font-display text-[40px] leading-none">{etape.titre}</h3>
+                <p className="text-lg leading-snug">{etape.texte}</p>
+                <p className="border-t border-ink pt-4 font-mono text-xs uppercase tracking-widest">Statut : {etape.statut}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
     </>
