@@ -127,14 +127,12 @@ function Accueil() {
                   <span aria-hidden="true" className="mr-3 font-mono">
                     [x]
                   </span>
-                  3 ans en gestion de produit, jusqu'à Lead Product Manager
-                </li>
+PLus de 3 ans en gestion de produit, jusqu'à Lead Product Manager                </li>
                 <li>
                   <span aria-hidden="true" className="mr-3 font-mono">
                     [x]
                   </span>
-                  Coordination Conception, Développement et Produit
-                </li>
+Coordination des équipes conception, développement et produit                </li>
                 <li>
                   <span aria-hidden="true" className="mr-3 font-mono">
                     [x]

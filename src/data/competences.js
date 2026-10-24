@@ -2,7 +2,7 @@ export const savoirFaire = [
   { code: 'SF-01', label: 'Gestion de backlog produit', source: 'Lapsus' },
   { code: 'SF-02', label: 'Priorisation des besoins', source: 'Lapsus' },
   { code: 'SF-03', label: 'Analyse du besoin utilisateur', source: 'Cabinet · Discord' },
-  { code: 'SF-04', label: 'Animation de daily meetings', source: 'Lapsus · Discord' },
+  { code: 'SF-04', label: "Animation de réunions et d'événements", source: 'Lapsus · Discord' },
   { code: 'SF-05', label: 'Pilotage des recettes et tests', source: 'Lapsus · Discord' },
   { code: 'SF-06', label: "Coordination d'équipes", source: 'Lapsus · Discord' },
   { code: 'SF-07', label: 'Maquettage sur Figma', source: 'Graphisme' },
