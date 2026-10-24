@@ -9,11 +9,13 @@ function Footer() {
           <p className="hidden md:block">Build v2026.10 · React + Tailwind</p>
         </div>
         <p className="text-center text-sm md:text-left">
-          Crédits : polices League Gothic, Questrial et IBM Plex Mono (Google Fonts, licence OFL) · formulaire Formspree · hébergement GitHub Pages
+          Crédits : polices League Gothic, Questrial et IBM Plex Mono (Google
+          Fonts, licence OFL) · logo Discord © Discord Inc. · formulaire
+          Formspree · hébergement GitHub Pages{" "}
         </p>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
