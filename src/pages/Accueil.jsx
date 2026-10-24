@@ -1,4 +1,5 @@
-import { Link } from 'react-router'
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router'
 import EnTeteSection from '../components/EnTeteSection'
 import ColonneBacklog from '../components/ColonneBacklog'
 import { savoirFaire, savoirs, enCours } from '../data/competences'
@@ -6,6 +7,14 @@ import { roadmap } from '../data/roadmap'
 import FormulaireContact from '../components/FormulaireContact'
 
 function Accueil() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.state?.section) {
+      document.getElementById(location.state.section).scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [location])
+
   return (
     <>
       <section aria-labelledby="hero-titre" className="mx-auto max-w-7xl px-6 pt-12 pb-16">
