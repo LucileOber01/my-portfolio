@@ -5,6 +5,7 @@ import ColonneBacklog from "../components/ColonneBacklog";
 import { savoirFaire, savoirs, enCours } from "../data/competences";
 import { roadmap } from "../data/roadmap";
 import FormulaireContact from "../components/FormulaireContact";
+import photo from "../assets/lucile-ober.webp";
 
 function Accueil() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function Accueil() {
 
   return (
     <>
-    <title>Lucile Ober · Product Owner / AMOA</title>
+      <title>Lucile Ober · Product Owner / AMOA</title>
       <section
         aria-labelledby="hero-titre"
         className="mx-auto max-w-7xl px-6 pt-5 pb-16"
@@ -40,7 +41,13 @@ function Accueil() {
           >
             Lucile
           </span>
-          <div className="size-20 rounded-full border-4 border-white bg-sage md:size-50"></div>
+          <img
+            src={photo}
+            alt="Portrait de Lucile Ober"
+            width="200"
+            height="200"
+            className="size-20 rounded-full border-4 border-white object-cover md:size-50"
+          />{" "}
         </div>
         <div className="flex flex-wrap items-end gap-6 md:gap-10">
           <span
