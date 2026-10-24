@@ -94,6 +94,36 @@ function Accueil() {
           </ol>
         </div>
       </section>
+
+      <section id="contact" aria-labelledby="contact-titre" className="border-t border-ink">
+  <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
+    <EnTeteSection code="US-04" nom="Contact" info="Réponse sous 48 h" />
+    <div className="grid gap-12 md:grid-cols-2 md:gap-24">
+      <div className="flex flex-col gap-6">
+        <h2 id="contact-titre" className="font-display text-5xl md:text-7xl">Ouvrir un ticket</h2>
+        <p className="text-lg">Une opportunité d'alternance, un projet, une question : décrivez votre besoin, je m'en occupe.</p>
+        <ul className="border-t border-ink">
+          <li className="flex items-center justify-between gap-4 border-b border-ink py-4">
+            <span className="font-mono text-xs uppercase tracking-widest">Email</span>
+            <a href="mailto:lucile.ober@pm.me" className="text-lg underline underline-offset-4 hover:no-underline">lucile.ober@pm.me</a>
+          </li>
+          <li className="flex items-center justify-between gap-4 border-b border-ink py-4">
+            <span className="font-mono text-xs uppercase tracking-widest">LinkedIn</span>
+            <a href="www.linkedin.com/in/lucile-ober-508067445" className="text-lg underline underline-offset-4 hover:no-underline">Profil LinkedIn</a>
+          </li>
+          <li className="flex items-center justify-between gap-4 border-b border-ink py-4">
+            <span className="font-mono text-xs uppercase tracking-widest">GitHub</span>
+            <a href="https://github.com/LucileOber01" className="text-lg underline underline-offset-4 hover:no-underline">LucileOber01</a>
+          </li>
+          <li className="flex items-center justify-between gap-4 border-b border-ink py-4">
+            <span className="font-mono text-xs uppercase tracking-widest">CV</span>
+            <a href={`${import.meta.env.BASE_URL}cv-lucile-ober.pdf`} download className="text-lg underline underline-offset-4 hover:no-underline">Télécharger (PDF)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   )
 }
