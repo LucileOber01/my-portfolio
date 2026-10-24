@@ -26,6 +26,7 @@ function Projets() {
 
   return (
     <>
+    <title>Projets · Lucile Ober, Product Owner / AMOA</title>
       <section aria-labelledby="projets-titre" className="border-b border-ink">
         <div className="mx-auto max-w-7xl px-6 pt-5 pb-12">
           <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">

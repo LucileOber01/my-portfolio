@@ -19,6 +19,7 @@ function Accueil() {
 
   return (
     <>
+    <title>Lucile Ober · Product Owner / AMOA</title>
       <section
         aria-labelledby="hero-titre"
         className="mx-auto max-w-7xl px-6 pt-5 pb-16"
