@@ -6,6 +6,7 @@ import { savoirFaire, savoirs, enCours } from "../data/competences";
 import { roadmap } from "../data/roadmap";
 import FormulaireContact from "../components/FormulaireContact";
 import photo from "../assets/lucile-ober.webp";
+import RondDecoratif from "../components/RondDecoratif";
 
 function Accueil() {
   const location = useLocation();
@@ -21,66 +22,77 @@ function Accueil() {
   return (
     <>
       <title>Lucile Ober · Product Owner / AMOA</title>
-      <section
-        aria-labelledby="hero-titre"
-        className="mx-auto max-w-7xl px-6 pt-5 pb-16"
-      >
-        <h1 id="hero-titre" className="sr-only">
-          Lucile Ober, Product Owner / AMOA
-        </h1>
-        <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">
-          <p>US-00 · Product brief</p>
-          <p className="hidden md:block">
-            Build v2026.10 · Release cible : 01.2027
-          </p>
-        </div>
-        <div className="mt-12 flex flex-wrap items-center gap-6 md:gap-10">
-          <span
-            aria-hidden="true"
-            className="font-display text-[128px] leading-[0.82] md:text-[260px]"
-          >
-            Lucile
-          </span>
-          <img
-            src={photo}
-            alt="Portrait de Lucile Ober"
-            width="200"
-            height="200"
-            className="size-20 rounded-full border-4 border-white object-cover md:size-50"
-          />{" "}
-        </div>
-        <div className="flex flex-wrap items-end gap-6 md:gap-10">
-          <span
-            aria-hidden="true"
-            className="font-display text-[128px] leading-[0.82] text-transparent [-webkit-text-stroke:2px_var(--color-ink)] md:text-[260px]"
-          >
-            Ober
-          </span>
-          <div className="flex flex-col gap-3 pb-4">
-            <p className="font-mono text-xs uppercase tracking-widest">
-              Product Owner / AMOA
+      <div className="relative overflow-hidden">
+        <RondDecoratif
+          pivot="origin-right"
+          className="-top-10 -right-[150px] size-75 bg-peach md:-top-30 md:-right-50 md:size-130"
+        />
+        <RondDecoratif
+          pivot="origin-left"
+          sens={-1}
+          className="-bottom-44 -left-[150px] hidden size-90 bg-sage md:block"
+        />
+        <section
+          aria-labelledby="hero-titre"
+          className="relative mx-auto max-w-7xl px-6 pt-5 pb-16"
+        >
+          <h1 id="hero-titre" className="sr-only">
+            Lucile Ober, Product Owner / AMOA
+          </h1>
+          <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">
+            <p>US-00 · Product brief</p>
+            <p className="hidden md:block">
+              Build v2026.10 · Release cible : 01.2027
             </p>
-            <p className="font-display text-4xl md:text-5xl">
-              Designer. Coder. Piloter.
-            </p>
-            <div className="mt-2 flex flex-wrap gap-3">
-              <Link
-                to="/projets"
-                className="inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 text-cream hover:bg-ink/85"
-              >
-                Voir les releases <span aria-hidden="true">→</span>
-              </Link>
-              <Link
-                to="/"
-                state={{ section: "contact" }}
-                className="inline-flex min-h-12 items-center rounded-full border border-ink px-6 hover:bg-sage"
-              >
-                Ouvrir un ticket
-              </Link>
+          </div>
+          <div className="mt-12 flex flex-wrap items-center gap-6 md:gap-10">
+            <span
+              aria-hidden="true"
+              className="font-display text-[128px] leading-[0.82] md:text-[260px]"
+            >
+              Lucile
+            </span>
+            <img
+              src={photo}
+              alt="Portrait de Lucile Ober"
+              width="200"
+              height="200"
+              className="size-20 rounded-full border-4 border-white object-cover md:size-50"
+            />{" "}
+          </div>
+          <div className="flex flex-wrap items-end gap-6 md:gap-10">
+            <span
+              aria-hidden="true"
+              className="font-display text-[128px] leading-[0.82] text-transparent [-webkit-text-stroke:2px_var(--color-ink)] md:text-[260px]"
+            >
+              Ober
+            </span>
+            <div className="flex flex-col gap-3 pb-4">
+              <p className="font-mono text-xs uppercase tracking-widest">
+                Product Owner / AMOA
+              </p>
+              <p className="font-display text-4xl md:text-5xl">
+                Designer. Coder. Piloter.
+              </p>
+              <div className="mt-2 flex flex-wrap gap-3">
+                <Link
+                  to="/projets"
+                  className="inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 text-cream hover:bg-ink/85"
+                >
+                  Voir les releases <span aria-hidden="true">→</span>
+                </Link>
+                <Link
+                  to="/"
+                  state={{ section: "contact" }}
+                  className="inline-flex min-h-12 items-center rounded-full border border-ink px-6 hover:bg-sage"
+                >
+                  Ouvrir un ticket
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section aria-labelledby="apropos-titre" className="border-t border-ink">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-18">
@@ -266,7 +278,7 @@ function Accueil() {
                     LinkedIn
                   </span>
                   <a
-                    href="www.linkedin.com/in/lucile-ober-508067445"
+                    href="https://www.linkedin.com/in/lucile-ober-508067445"
                     className="text-lg underline underline-offset-4 hover:no-underline"
                   >
                     Profil LinkedIn

@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import CarteRelease from '../components/CarteRelease'
 import { releases } from '../data/releases'
+import RondDecoratif from '../components/RondDecoratif'
 
 function Projets() {
   const livrees = releases.filter((release) => release.statut === 'Livré').length
@@ -27,8 +28,9 @@ function Projets() {
   return (
     <>
     <title>Projets · Lucile Ober, Product Owner / AMOA</title>
-      <section aria-labelledby="projets-titre" className="border-b border-ink">
-        <div className="mx-auto max-w-7xl px-6 pt-5 pb-12">
+      <section aria-labelledby="projets-titre" className="relative overflow-hidden border-b border-ink">
+  <RondDecoratif pivot="origin-right" className="-top-45 -right-[140px] hidden size-115 bg-sage md:block" />
+  <div className="relative mx-auto max-w-7xl px-6 pt-5 pb-12">
           <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">
             <p>REL · Releases</p>
             <p>{String(releases.length).padStart(2, '0')} releases · {livrees} livrées · {enCours} en cours</p>
