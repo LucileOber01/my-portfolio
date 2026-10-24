@@ -3,6 +3,7 @@ import EnTeteSection from '../components/EnTeteSection'
 import ColonneBacklog from '../components/ColonneBacklog'
 import { savoirFaire, savoirs, enCours } from '../data/competences'
 import { roadmap } from '../data/roadmap'
+import FormulaireContact from '../components/FormulaireContact'
 
 function Accueil() {
   return (
@@ -121,6 +122,7 @@ function Accueil() {
           </li>
         </ul>
       </div>
+      <FormulaireContact />
     </div>
   </div>
 </section>
