@@ -15,7 +15,7 @@ function CarteRelease({ release }) {
   ];
 
   return (
-    <article className="flex h-full flex-col gap-5 rounded-card bg-white p-6">
+    <article className="group flex h-full flex-col gap-5 rounded-card bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_32px_-16px_rgb(48_63_60/0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
       <div className="flex items-center justify-between font-mono text-xs uppercase tracking-widest">
         <span>{release.code}</span>
         <span className="inline-flex items-center gap-2 rounded-full border border-ink px-3 py-1.5">
@@ -26,7 +26,6 @@ function CarteRelease({ release }) {
           {release.statut}
         </span>
       </div>
-
       <div
         className={`flex h-50 items-center justify-center overflow-hidden rounded-2xl ${release.visuel}`}
       >
@@ -35,9 +34,7 @@ function CarteRelease({ release }) {
             src={release.image}
             alt={release.alt}
             loading="lazy"
-            className={
-              release.logo ? "h-20 w-auto" : "size-full object-cover object-top"
-            }
+            className={`transition duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 ${release.logo ? "h-20 w-auto" : "size-full object-cover object-top"}`}
           />
         ) : (
           <div className="flex flex-col items-center gap-1">
@@ -61,7 +58,6 @@ function CarteRelease({ release }) {
         </span>
         <h2 className="font-display text-4xl leading-none">{release.titre}</h2>
       </div>
-
       <dl className="border-t border-ink">
         {lignes.map(([label, valeur]) => (
           <div
@@ -75,7 +71,6 @@ function CarteRelease({ release }) {
           </div>
         ))}
       </dl>
-
       <div>
         <h3 className="mb-3 font-mono text-xs uppercase tracking-widest">
           Compétences mobilisées

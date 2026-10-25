@@ -229,7 +229,7 @@ function Accueil() {
               {roadmap.map((etape) => (
                 <li
                   key={etape.phase}
-                  className={`flex flex-col gap-4 rounded-card p-7 ${etape.fond}`}
+                  className={`flex flex-col gap-4 rounded-card p-7 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_32px_-16px_rgb(48_63_60/0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${etape.fond}`}
                 >
                   <div className="flex items-center justify-between font-mono text-xs uppercase tracking-widest">
                     <span>{etape.phase}</span>
