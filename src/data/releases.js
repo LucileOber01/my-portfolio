@@ -34,6 +34,7 @@ export const releases = [
     visuel: 'bg-sage',
     image: portfolio,
     alt: "Maquette Figma de la page d'accueil du portfolio",
+    codeSource: 'https://github.com/LucileOber01/my-portfolio',
   },
   {
     code: 'REL-03',

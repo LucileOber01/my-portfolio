@@ -34,7 +34,7 @@ function CarteRelease({ release }) {
             src={release.image}
             alt={release.alt}
             loading="lazy"
-            className={`transition duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 ${release.logo ? "h-20 w-auto" : "size-full object-cover object-top"}`}
+            className={`transition duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 ${release.logo ? "h-20 w-auto rounded-2xl" : "size-full object-cover object-top"}`}
           />
         ) : (
           <div className="flex flex-col items-center gap-1">
@@ -86,6 +86,14 @@ function CarteRelease({ release }) {
           ))}
         </ul>
       </div>
+      {release.codeSource && (
+        <a
+          href={release.codeSource}
+          className="mt-auto self-start underline underline-offset-4 hover:no-underline"
+        >
+          Code source sur GitHub <span aria-hidden="true">→</span>
+        </a>
+      )}
     </article>
   );
 }
