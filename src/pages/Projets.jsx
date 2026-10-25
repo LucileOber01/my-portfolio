@@ -4,11 +4,14 @@ import RondDecoratif from "../components/RondDecoratif";
 import { releases } from "../data/releases";
 
 function Projets() {
-  const livrees = releases.filter((release) => release.statut === "Livré").length;
+  const livrees = releases.filter(
+    (release) => release.statut === "Livré",
+  ).length;
   const enCours = releases.length - livrees;
 
   const listeRef = useRef(null);
   const [index, setIndex] = useState(0);
+  const [bords, setBords] = useState({ gauche: 0, droite: 0 });
 
   function defiler(direction) {
     const liste = listeRef.current;
@@ -21,6 +24,12 @@ function Projets() {
     const maximum = liste.scrollWidth - liste.clientWidth;
     const avancement = maximum > 0 ? liste.scrollLeft / maximum : 0;
     setIndex(Math.round(avancement * (releases.length - 1)));
+    const gauche = Math.min(liste.scrollLeft, 64);
+    const droite = Math.min(liste.scrollLeft, maximum - liste.scrollLeft, 64);
+    setBords({
+      gauche: gauche < 2 ? 0 : gauche,
+      droite: droite < 2 ? 0 : droite,
+    });
   }
 
   const progression = ((index + 1) / releases.length) * 100;
@@ -41,7 +50,8 @@ function Projets() {
           <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">
             <p>REL · Releases</p>
             <p>
-              {String(releases.length).padStart(2, "0")} releases · {livrees} livrées · {enCours} en cours
+              {String(releases.length).padStart(2, "0")} releases · {livrees}{" "}
+              livrées · {enCours} en cours
             </p>
           </div>
           <div className="mt-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -69,8 +79,12 @@ function Projets() {
         <ul
           ref={listeRef}
           onScroll={mettreAJour}
+          onScrollEnd={mettreAJour}
           tabIndex={0}
           className="flex snap-x snap-mandatory gap-6 overflow-x-auto py-4 [scrollbar-width:none] focus-visible:outline-2 focus-visible:outline-ink"
+          style={{
+            maskImage: `linear-gradient(to right, transparent, black ${bords.gauche}px, black calc(100% - ${bords.droite}px), transparent)`,
+          }}
         >
           {releases.map((release) => (
             <li
@@ -113,7 +127,8 @@ function Projets() {
           </div>
 
           <p className="font-mono text-xs tracking-widest">
-            {String(index + 1).padStart(2, "0")} / {String(releases.length).padStart(2, "0")}
+            {String(index + 1).padStart(2, "0")} /{" "}
+            {String(releases.length).padStart(2, "0")}
           </p>
 
           <button
