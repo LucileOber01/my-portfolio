@@ -1,4 +1,5 @@
 import discord from '../assets/discord.svg'
+import lapsus from '../assets/lapsus.webp'
 import jobBoard from '../assets/rel-03-job-board.webp'
 import portfolio from '../assets/rel-05-portfolio.webp'
 import petitPousse from '../assets/rel-06-petit-pousse.webp'
@@ -46,7 +47,8 @@ export const releases = [
     technos: 'Trello, Figma, GitHub',
     competences: ['SF-01 · Backlog produit', 'SF-02 · Priorisation'],
     visuel: 'bg-peach',
-    mention: 'Application mobile',
+    image: lapsus,
+    alt: "Logo de l'application Lapsus",
   },
   {
     code: 'REL-04',
@@ -55,7 +57,7 @@ export const releases = [
     statut: 'Livré',
     contexte: "Communauté française d'un jeu mobile, plus de 500 membres",
     objectif: 'Organiser et animer la communauté, coordonner la guilde',
-    role: 'Administratrice : mise en place des bots, organisation des événements et des shotcalls',
+    role: 'Administratrice dans une équipe de 2 à 3 personnes : mise en place des bots, organisation des événements et des appels',
     resultat: 'Top 5 mondial · 5 guildes dans le top 100',
     technos: 'Discord, Carl-bot, GiveawayBot, bots personnalisés',
     competences: ['SF-04 · Animation', 'SF-06 · Coordination'],
