@@ -36,7 +36,7 @@ function Projets() {
 
   return (
     <>
-      <title>Projets · Lucile Ober, Product Owner / AMOA</title>
+      <title>Projets · Lucile Ober, Product Owner · Développeuse</title>
 
       <section
         aria-labelledby="projets-titre"

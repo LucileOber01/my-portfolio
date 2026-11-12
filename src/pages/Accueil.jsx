@@ -22,7 +22,7 @@ function Accueil() {
 
   return (
     <>
-      <title>Lucile Ober · Product Owner / AMOA</title>
+      <title>Lucile Ober · Product Owner · Développeuse</title>
       <div className="relative overflow-hidden">
         <RondDecoratif
           pivot="origin-right"
@@ -38,7 +38,7 @@ function Accueil() {
           className="relative mx-auto max-w-7xl px-6 pt-5 pb-16"
         >
           <h1 id="hero-titre" className="sr-only">
-            Lucile Ober, Product Owner / AMOA
+            Lucile Ober, Product Owner · Développeuse
           </h1>
           <div className="flex justify-between gap-4 border-b border-ink/35 pb-5 font-mono text-xs uppercase tracking-widest">
             <p>US-00 · Product brief</p>
@@ -70,7 +70,7 @@ function Accueil() {
             </span>
             <div className="flex flex-col gap-3 pb-4">
               <p className="font-mono text-xs uppercase tracking-widest">
-                Product Owner / AMOA
+                Product Owner · Développeuse
               </p>
               <p className="font-display text-4xl md:text-5xl">
                 Designer. Coder. Piloter.
@@ -108,18 +108,20 @@ function Accueil() {
                   User story
                 </p>
                 <p>
-                  En tant que <strong>recruteur</strong>, je cherche une Product
-                  Owner <strong>curieuse et adaptable</strong>, afin de faire
-                  avancer mes projets de <strong>transformation digitale</strong>.
+                  En tant que <strong>recruteur</strong>, je cherche un profil
+                  capable de <strong>cadrer un besoin utilisateur</strong> et
+                  de <strong>construire l'outil qui y répond</strong>, afin de
+                  faire avancer mes projets de{" "}
+                  <strong>transformation digitale</strong>.
                 </p>
               </blockquote>
               <div className="flex flex-col gap-5 md:col-span-5">
                 <p className="text-lg leading-relaxed">
                   Après plus de trois ans en gestion de produit au sein d'une
                   startup, je fais évoluer mon parcours vers la transformation
-                  digitale et l'innovation technologique. Année de mise à niveau à
-                  Epitech Lyon en 2026, puis MBA Strategic Project Management en
-                  2027.
+                  digitale et l'innovation technologique. Je me forme au
+                  développement à Epitech Lyon, puis je poursuivrai en 2027 avec
+                  le MBA IA & transformation des organisations, en alternance.
                 </p>
                 <h3 className="border-t border-ink/35 pt-3 font-mono text-xs uppercase tracking-widest">
                   Critères d'acceptation
