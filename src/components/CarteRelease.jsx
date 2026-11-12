@@ -2,7 +2,7 @@ const stylesBadge = {
   Pro: "border border-ink",
   Initiative: "bg-ink text-cream",
   Epitech: "bg-sage",
-  Personnel: "bg-peach",
+  Simplon: "bg-peach",
 };
 
 function CarteRelease({ release }) {

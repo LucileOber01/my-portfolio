@@ -23,7 +23,7 @@ export const releases = [
   {
     code: 'REL-02',
     titre: 'Petit Pousse',
-    badge: 'Personnel',
+    badge: 'Simplon',
     statut: 'Livré',
     contexte: 'Formation Simplon : certification CMS (2022)',
     objectif: 'Promouvoir la vente directe entre petits producteurs locaux et consommateurs',
