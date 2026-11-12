@@ -1,6 +1,6 @@
 # Lucile Ober · Portfolio
 
-Portfolio de Lucile Ober, Product Owner / AMOA en recherche d'alternance dès janvier 2027.
+Portfolio de Lucile Ober, Product Owner et développeuse en recherche d'alternance dès janvier 2027.
 
 **Site en ligne : https://lucileober01.github.io/my-portfolio/**
 
