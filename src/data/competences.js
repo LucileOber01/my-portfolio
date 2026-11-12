@@ -19,6 +19,7 @@ export const savoirs = [
   { code: 'SA-06', label: 'Gestion de produit' },
   { code: 'SA-07', label: 'Anglais B2 (TOEIC)' },
   { code: 'SA-08', label: 'Veille technologique', source: 'Initiative' },
+  { code: 'SA-16', label: 'Microsoft 365' },
 ]
 
 export const enCours = [
@@ -29,4 +30,6 @@ export const enCours = [
   { code: 'SA-13', label: 'MySQL' },
   { code: 'SA-14', label: 'React' },
   { code: 'SA-15', label: 'Tailwind CSS' },
+  { code: 'SA-17', label: 'Node.js / Express' },
+  { code: 'SA-18', label: 'API REST' },
 ]
